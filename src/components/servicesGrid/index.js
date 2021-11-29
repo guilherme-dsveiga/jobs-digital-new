@@ -6,30 +6,34 @@ import PpcIcon from '../../assets/ppc-icon.png'
 import SearchIcon from '../../assets/search-icon.png'
 import SocialIcon from '../../assets/social-icon.png'
 import VideoIcon from '../../assets/video-icon.png'
-import WebdesignIcon from '../../assets/webdesign-icon.png'
+import WebdesignIcon from '../../assets/webdesign-icon.png';
+import Placeholder from '../../assets/placeholder.png';
 
 const useStyles = makeStyles(() => ({
         gridContainer: {
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr 1fr',
-                gridTemplateRows: '1fr 1fr',
-                placeItems: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
                 paddingInline: '2rem',
-                gap: '20px'
         }
 }))
 
 function ServicesGrid() {
         const classes = useStyles();
 
+
+
+        const lorem = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, dignissimos ratione voluptatibus quasi fuga iusto numquam. Praesentium, explicabo tempora itaque sunt reprehenderit repellendus, vel excepturi eius fugiat exercitationem maiores adipisci minus unde voluptatibus autem consequuntur necessitatibus! Vitae quidem aspernatur voluptatum quia odio voluptatem incidunt iusto placeat, delectus sit consequuntur qui sapiente illo consectetur laudantium expedita eos vero quaerat totam? Rerum inventore amet.`
+
         return (
                 <div className={classes.gridContainer}>
-                        <GridItem icon={WebdesignIcon} alt="Icone de Web Design" title="Web Design" paragraph="You need more than a beautiful website. You need a complete online strategy, designed to conver. Build your new website with us today." />
-                        <GridItem icon={SearchIcon} alt="Icone de Lupa" title="Search Engine Optimization | SEO" paragraph="Improve your local ranking on Google. Show up on results, appear for people who search for businesses and places near their location." />
-                        <GridItem icon={PpcIcon} alt="Icone de Ferramentas" title="PPC | Google Advertising" paragraph="Get more calls to your business or visits to your website. Online ads on Google can help you reach more customers today!" />
-                        <GridItem icon={SocialIcon} alt="Icone de Pássaro do Twitter" title="Social Media" paragraph="Improve your online presence with social media." />
-                        <GridItem icon={ConversionIcon} alt="Icone de Pessoas com engrenagem na frente" title="Conversion Optimization | CRO" paragraph="Increase the percentage of users who perform a desired action on a website" />
-                        <GridItem icon={VideoIcon} alt="Icone de Video" title="Video Production" paragraph="Produce your unique video content with us" />
+                        <GridItem img={Placeholder} alt="Foto de um notebook em cima de uma mesa" title="Websites and" paragraph={lorem} direction="ltr" buttonText="Websites and e-commerce" bold="e-commerce" />
+                        <GridItem img={Placeholder} alt="Icone de Lupa" title="Search Engine Optimization" paragraph={lorem}  direction="rtl" buttonText="Check the offer!" bold="SEO" />
+                        <GridItem img={Placeholder} alt="Icone de Ferramentas" title="PPC"paragraph={lorem}  direction="ltr" buttonText="Websites and e-commerce" bold="Google Advertising" />
+                        <GridItem img={Placeholder} alt="Icone de Pássaro do Twitter" title="Social" paragraph={lorem}  direction="rtl" buttonText="Check the offer!" bold="Media" />
+                        <GridItem img={Placeholder} alt="Icone de Pessoas com engrenagem na frente" title="Conversion Optimization" paragraph={lorem}  direction="ltr" buttonText="Websites and e-commerce"  bold="CRO" />
+                        <GridItem img={Placeholder} alt="Icone de Video" title="Video" paragraph={lorem} direction="rtl" buttonText="Check the offer!" bold="Production"  />
                 </div>
         )
 }
