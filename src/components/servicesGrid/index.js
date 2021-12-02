@@ -7,7 +7,12 @@ import SearchIcon from '../../assets/search-icon.png'
 import SocialIcon from '../../assets/social-icon.png'
 import VideoIcon from '../../assets/video-icon.png'
 import WebdesignIcon from '../../assets/webdesign-icon.png';
-import Placeholder from '../../assets/placeholder.png';
+import Services1 from '../../assets/services-1.png';
+import Services2 from '../../assets/services-2.png';
+import Services3 from '../../assets/services-3.png';
+import Services4 from '../../assets/services-4.png';
+import Services5 from '../../assets/services-5.png';
+import Services6 from '../../assets/services-6.png';
 
 const useStyles = makeStyles(() => ({
         gridContainer: {
@@ -28,12 +33,12 @@ function ServicesGrid() {
 
         return (
                 <div className={classes.gridContainer}>
-                        <GridItem img={Placeholder} alt="Foto de um notebook em cima de uma mesa" title="Websites and" paragraph={lorem} direction="ltr" buttonText="Websites and e-commerce" bold="e-commerce" />
-                        <GridItem img={Placeholder} alt="Icone de Lupa" title="Search Engine Optimization" paragraph={lorem}  direction="rtl" buttonText="Check the offer!" bold="SEO" />
-                        <GridItem img={Placeholder} alt="Icone de Ferramentas" title="PPC"paragraph={lorem}  direction="ltr" buttonText="Websites and e-commerce" bold="Google Advertising" />
-                        <GridItem img={Placeholder} alt="Icone de Pássaro do Twitter" title="Social" paragraph={lorem}  direction="rtl" buttonText="Check the offer!" bold="Media" />
-                        <GridItem img={Placeholder} alt="Icone de Pessoas com engrenagem na frente" title="Conversion Optimization" paragraph={lorem}  direction="ltr" buttonText="Websites and e-commerce"  bold="CRO" />
-                        <GridItem img={Placeholder} alt="Icone de Video" title="Video" paragraph={lorem} direction="rtl" buttonText="Check the offer!" bold="Production"  />
+                        <GridItem img={Services1} alt="Foto de um notebook em cima de uma mesa" title="Websites and" paragraph={lorem} direction="ltr" buttonText="Websites and e-commerce" bold="e-commerce" />
+                        <GridItem img={Services2} alt="Icone de Lupa" title="Search Engine Optimization" paragraph={lorem}  direction="rtl" buttonText="Check the offer!" bold="SEO" />
+                        <GridItem img={Services3} alt="Icone de Ferramentas" title="PPC"paragraph={lorem}  direction="ltr" buttonText="Websites and e-commerce" bold="Google Advertising" />
+                        <GridItem img={Services4} alt="Icone de Pássaro do Twitter" title="Social" paragraph={lorem}  direction="rtl" buttonText="Check the offer!" bold="Media" />
+                        <GridItem img={Services5} alt="Icone de Pessoas com engrenagem na frente" title="Conversion Optimization" paragraph={lorem}  direction="ltr" buttonText="Websites and e-commerce"  bold="CRO" />
+                        <GridItem img={Services6} alt="Icone de Video" title="Video" paragraph={lorem} direction="rtl" buttonText="Check the offer!" bold="Production"  />
                 </div>
         )
 }

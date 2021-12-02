@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginBlock: '2rem',
+                marginBottom: '2rem',
         },
         containerRTL: {
                 display: 'flex',
@@ -21,13 +21,8 @@ const useStyles = makeStyles(() => ({
         imgWrapper: {
                 flexBasis: '100%'
         },
-        imgLTR: {
-                width: '100%',
-                borderTopLeftRadius: ' 125px',
-        },
-        imgRTL: {
-                width: '100%',
-                borderTopRightRadius: ' 125px',
+        img:{
+                width: '100%'
         },
         infoLTR: {
                 display: 'flex',
@@ -78,7 +73,7 @@ function GridItem({ img, alt, title, bold, paragraph, buttonText, direction }) {
         return (
                 <div className={direction === 'ltr' ? classes.containerLTR : classes.containerRTL}>
                         <div className={classes.imgWrapper}>
-                                <img className={direction === 'ltr' ? classes.imgLTR : classes.imgRTL} src={img} alt={alt} />
+                                <img className={classes.img} src={img} alt={alt} />
                         </div>
                         <div className={direction === 'ltr' ? classes.infoLTR : classes.infoRTL}>
                                 <div className={classes.titleWrapper}>
