@@ -1,12 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import GridItem from '../gridItem';
-import ConversionIcon from '../../assets/conversion-icon.png'
-import PpcIcon from '../../assets/ppc-icon.png'
-import SearchIcon from '../../assets/search-icon.png'
-import SocialIcon from '../../assets/social-icon.png'
-import VideoIcon from '../../assets/video-icon.png'
-import WebdesignIcon from '../../assets/webdesign-icon.png';
 import Services1 from '../../assets/services-1.png';
 import Services2 from '../../assets/services-2.png';
 import Services3 from '../../assets/services-3.png';
