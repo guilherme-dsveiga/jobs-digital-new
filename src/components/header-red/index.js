@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from "react-router-dom";
 import { Button } from '@material-ui/core';
@@ -10,7 +10,7 @@ import ScrollToTop from '../scrollToTop';
 
 const useStyles = makeStyles((theme) => ({
         appbar: {
-                background: 'linear-gradient(0deg, rgba(11,12,94,0) 0%, rgba(0,0,0,0.4864320728291317) 33%, rgba(0,0,0,0.665703781512605) 53%, rgba(0,0,0,0.7805497198879552) 78%)',
+                background: 'rgb(175 50 50)',
                 boxShadow: 'none',
                 color: 'white',
                 paddingInline: '5rem',
@@ -53,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
         toolbar: {
                 justifyContent: 'space-between',
                 paddingBlock: theme.spacing(3),
+                [theme.breakpoints.down('sm')]: {
+                        paddingBlock: '10px'
+                }
 
         },
         button: {
@@ -71,30 +74,13 @@ const useStyles = makeStyles((theme) => ({
         }
 }));
 
-function Header({ isRed }) {
+function HeaderRed() {
         const classes = useStyles();
-        const [blackHeader, setBlackHeader] = useState(false);
-
-        useEffect(() => {
-                const scrollListener = () => {
-                        if (window.scrollY > 400) {
-                                setBlackHeader(true);
-                        } else {
-                                setBlackHeader(false);
-                        }
-                }
-
-                window.addEventListener('scroll', scrollListener);
-
-                return () => {
-                        window.removeEventListener('scroll', scrollListener);
-                }
-        }, []);
 
         return (
                 <header>
                         <ScrollToTop />
-                        <AppBar position="fixed" className={blackHeader ? classes.appbarBlack : classes.appbar}>
+                        <AppBar position="fixed" className={classes.appbar}>
                                 <Toolbar className={classes.toolbar}>
                                         <Link className={classes.centerLogo} to="/">
                                                 <IconButton className={classes.jobsLogoButton}>
@@ -154,6 +140,7 @@ function Header({ isRed }) {
                                                 </Link>
                                                 <Link className={classes.linkItem} to="/"><Button className={classes.button}>Blog</Button></Link>
                                                 <Link className={classes.linkItem} to="/"><Button className={classes.button}>Contato</Button></Link>
+
                                         </div >
                                 </Toolbar>
                         </AppBar>
@@ -161,4 +148,4 @@ function Header({ isRed }) {
         )
 }
 
-export default Header
+export default HeaderRed

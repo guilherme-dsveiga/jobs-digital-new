@@ -1,6 +1,5 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import JobsDigital from '../../assets/jobsdigital.png';
 
 const useStyles = makeStyles(() => ({
         container: {
@@ -60,7 +59,7 @@ function Info() {
                 <div className={classes.container}>
                         <div className={classes.left}>
                                 <div>
-                                        <img className={classes.w100} src={JobsDigital} alt="Logo Jobs Digital"></img>
+                                        <img className={classes.w100} src="./assets/jobsdigital.png';" alt="Logo Jobs Digital"></img>
                                 </div>
                                 <div>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum quis urna vel varius. Nam suscipit convallis magna, in rhoncus ex ornare eu. Donec vitae nisi massa. Duis sed quam id odio bibendum euismod.</p>
